@@ -1,0 +1,135 @@
+.about {
+    width: 100vw;
+    height: 1200px;
+    background-color: #001974;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    margin-top: 10%;
+}
+
+.about-info {
+    max-width: 1220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.about-info .about-texts {
+    margin-right: 400px;
+    width: 330px;
+    height: 290px;
+}
+
+.about-texts .about-title {
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.about-texts .about-description {
+    font-size: 18px;
+    line-height: 14px;
+    text-align: center;
+
+    color: #00EC6D;
+    margin-top: 12px;
+}
+
+.about-info .about-img {
+    width: 296.75px;
+    height: 300px;
+
+    border-radius: 100px;
+}
+
+.about-icons {
+    width: 364px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about-icons button {
+    width: 150px;
+    height: 150px;
+    left: 829px;
+    top: 704px;
+
+    background: #FFFFFF;
+    box-shadow: 5px 5px 5px #001974;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.about-icons button img {
+    height: 125px;
+    width: 120px;
+}
+
+.circles {
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(180deg, #00EC6D 0%, #001974 100%);;
+}
+
+.circle1 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 323px;
+    top: 294px;
+    animation: circulo1 5s linear infinite;
+    z-index: 1;
+}
+
+.circle2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 1317px;
+    top: 514px;
+    animation: circulo2 5s linear infinite;
+    z-index: 1;
+}
+
+.circle3 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 810px;
+    top: 788px;
+    animation: circulo1 5s linear infinite;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle4 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: -147px;
+    top: 758px;
+    animation: circulo2 5s linear infinite;
+}
+
+.circle5 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 620px;
+    top: 974px;
+    animation: circulo3 5s linear infinite;
+}

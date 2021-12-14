@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+}
+
+.main {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/*Navegação*/
+.navigation {
+    position: absolute;
+    right: 10%;
+    top: 8%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background: #001974;
+    z-index: 2002;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.navigation.active {
+    animation: navigationMenu 0.3s linear forwards;
+    
+}
+
+.navigation.active .navigation-button {
+    position: absolute;
+    top: 5%;
+}
+
+.navigation .navigation-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: #001974;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 2002;
+    cursor: pointer;
+}
+
+.navigation-button .line {
+    width: 40px;
+    height: 5px;
+    background: #00EC6D;
+    z-index: 2003;
+}
+
+
+.navigation-button .firstLine.active {
+    margin-bottom: 4px;
+    animation:  primeiraLinha 0.3s linear forwards;
+}
+
+.navigation-button .secondLine {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.navigation-button .secondLine.active {
+    display: none;
+}
+
+.navigation-button .thirdLine.active {
+    margin-top: 4px;
+    animation:  terceiraLinha 0.3s linear forwards;
+}
+
+.navigation-topic {
+    list-style: none;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation-topic.active {
+    display: flex;
+    animation: topico 1s linear forwards;
+}
+
+.navigation-topic li {
+    margin-bottom: 5px;
+}
+
+.navigation-topic li a{
+    text-decoration: none;
+    font-size: 22px;
+    color: #00EC6D;
+}
+
+.navigation-topic .first-li {
+    margin-top: 30px;
+}
+
+
+/**h1 {
+    width: 454px;
+    height: 100px;
+    margin-top: 15%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 1.2;
+    text-align: center;
+
+    color: #00EC6D;
+    z-index: 2000;
+}**/
+
+/**Título**/
+
+.content {
+  position: relative;
+  margin-top: 20%;
+  z-index: 2000;
+}
+
+.content h2 {
+  position: absolute;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  font-size: 8em;
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #00EC6D;
+}
+
+.content h2:nth-child(2) {
+  color: #00EC6D;
+  animation: nomeLiquido 4s ease-in-out infinite;
+}
+
+/**Botão**/
+
+.main-button {
+  position: relative;
+  width: 200px;
+  height: 70px;
+  margin-top: 5%;
+  display: block;
+  overflow: hidden;
+    
+  border: 2px solid #00EC6D;
+  box-sizing: border-box;
+
+  cursor: pointer;
+  
+  z-index: 2001;
+
+}
+
+.main-button span {
+  position: relative;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  
+  text-align: center;
+
+  color: #00EC6D;
+  z-index: 2002;
+}
+
+.main-button .liquid {
+    position: absolute;
+    
+    top: -80px;
+    width: 200px;
+    height: 200px;
+    
+    overflow: hidden;
+
+    background: #001974;
+    
+    transition: 0.5s;
+    z-index: 2001;
+}
+
+.main-button:hover .liquid {
+  top: -120px;
+}
+
+.main-button .liquid.active {
+  animation: liquidoAtivo 2.5s linear forwards;
+}
+
+.liquid::before,
+.liquid::after
+{
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+
+.liquid::before {
+    border-radius: 45%;
+    background: rgba(255,255,255,1);
+    animation: liquido 5s linear infinite;
+}
+
+.liquid::after {
+    border-radius: 40%;
+    background: rgba(255,255,255,0.5);
+    animation: liquido 10s linear infinite;
+}
+
+/**Ondas do Background**/
+
+.wave-support {
+    width: 100%;
+    height: 25%;
+    background-color: #001974;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.wave-support.active {
+    animation: subindo 4s linear forwards;
+}
+
+.wave {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../images/onda.png);
+    background-size: 1000px 110px;
+}
+
+.wave.wave1 {
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 25%;
+}
+
+.wave1.active {
+    animation: subindoOnda 4s linear forwards, animate 30s linear infinite;
+}
+
+.wave.wave2 {
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 26%;
+}
+
+.wave2.active {
+    animation: subindoOnda2 4s linear forwards, animate2 15s linear infinite;
+}
+
+.wave.wave3 {
+    animation: animate 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 26.5%;
+}
+
+.wave3.active {
+    animation: subindoOnda3 4s linear forwards, animate 30s linear infinite;
+}
+
+.wave.wave4 {
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 27%;
+}
+
+.wave4.active {
+    animation: subindoOnda4 4s linear forwards, animate2 5s linear infinite;
+}
+
+
+
+
+
+

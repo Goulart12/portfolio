@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waves</title>
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="main">
+        <div class="navigation">
+            <button class="navigation-button" onclick="menuHamburguer()">
+                <span class="line firstLine"></span>
+                <span class="line secondLine"></span>
+                <span class="line thirdLine"></span>
+            </button>
+
+            <ul class="navigation-topic">
+                <li class="first-li"><a href="#about">Sobre mim</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Tecnologias</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <h2>Juarez</h2>
+            <h2>Juarez</h2>
+        </div>
+
+        <button id="main-button" class="main-button" onclick="animar()">
+            <span>COMEÇAR</span> 
+            <div class="liquid"></div>
+        </button>
+
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+        <div class="wave-support"></div>
+
+    </section>
+
+    <section class="about" id="about">
+        <div class="circles circle1"></div>
+        <div class="circles circle2"></div>
+        <div class="circles circle3">
+            <div class="about-icons">
+                <button><img src="./images/github.svg" alt="github"></button>
+
+                <button><img src="./images/pdf.svg" alt="currículo"></button>
+            </div>
+        </div>
+        
+
+        <div class="about-info">
+            <div class="about-texts">
+                <h1 class="about-title">Sobre mim</h1>
+                <p class="about-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                </p>
+            </div>
+
+            <img src="./images/personal.jpg" alt="Foto pessoal" class="about-img">
+        </div>
+    </section>
+
+    <!-- <section class="projects" id="projects">
+        <div class="circles circle4"></div>
+        <div class="circles circle5"></div>
+    </section> -->
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
