@@ -10,6 +10,7 @@
     overflow: hidden;
 
     margin-top: 10%;
+    margin-bottom: 17%;
 }
 
 .about-info {
@@ -114,22 +115,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
-.circle4 {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    left: -147px;
-    top: 758px;
-    animation: circulo2 5s linear infinite;
-}
-
-.circle5 {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    left: 620px;
-    top: 974px;
-    animation: circulo3 5s linear infinite;
-}
